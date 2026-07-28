@@ -19,3 +19,4 @@ jobs:
       - run: docker build -t app:${{ github.sha }} .
       - run: docker push registry/app:${{ github.sha }}
       - run: kubectl set image deployment/web-deployment web=registry/app:${{ github.sha }}
+      
