@@ -7,4 +7,5 @@ test("GET / responde correctamente", async () => {
 
   assert.equal(response.status, 200);
   assert.match(body, /Aplicación lista/);
+   server.close();
 });
