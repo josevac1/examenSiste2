@@ -23,8 +23,9 @@ const server = http.createServer((req, res) => {
 });
 
 if (require.main === module) {
-  server.listen(port, () => {
-    console.log(`Servidor escuchando en http://localhost:${port}`);
+   const PORT = process.env.PORT || 8080;
+  server.listen(PORT, () => {
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
   });
 }
 
